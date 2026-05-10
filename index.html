@@ -22,7 +22,7 @@
             position: relative;
         }
 
-        /* Logo: 250px wide, 20px from top/left */
+        /* Large Logo: 250px wide, 20px from top/left */
         .logo { 
             position: absolute;
             top: 20px;
@@ -67,12 +67,12 @@
         }
         .links a:hover { color: #ff0000; border-bottom: 1px solid #ff0000; }
 
-        /* Perfect symmetry: margin-top equals margin-left (145px) */
+        /* Adjusted position to be lower and aligned with logo center */
         .player-container { 
             width: 100%; 
             max-width: 500px; 
-            margin-top: 145px; 
-            margin-left: 145px; 
+            margin-top: 250px; /* Увеличил, чтобы плеер ушел ниже логотипа */
+            margin-left: 145px; /* Ровно центр 250px лого + 20px отступ */
             align-self: flex-start;
         }
         .player { margin-bottom: 25px; border: 1px solid #222; background: rgba(17, 17, 17, 0.8); }
@@ -95,8 +95,7 @@
         <div class="player">
             <iframe width="100%" height="150" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2317190522&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
         </div>
-        
-        </div>
+    </div>
 
 </body>
 </html>
