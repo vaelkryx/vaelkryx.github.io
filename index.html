@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="google-site-verification" content="knY5djNmqhoKYjxTp9qHq8Tg8yb-W2jIUVv5naYvCv4" />
-    
     <title>VAELKRYX | Official</title>
     <style>
         body { 
@@ -24,8 +22,7 @@
             position: relative;
         }
 
-        /* Large Logo: 250px wide, 20px from top/left */
-        .logo { 
+        .logo-top { 
             position: absolute;
             top: 20px;
             left: 20px;
@@ -66,7 +63,6 @@
         }
         .links a:hover { color: #ff0000; border-bottom: 1px solid #ff0000; }
 
-        /* MAIN LAYOUT GRID */
         .main-layout {
             display: flex;
             width: 100%;
@@ -78,7 +74,6 @@
             flex-wrap: wrap;
         }
 
-        /* Left Side: Music */
         .player-container { 
             flex: 1; 
             max-width: 500px;
@@ -86,7 +81,6 @@
         }
         .player { margin-bottom: 25px; border: 1px solid #222; background: rgba(17, 17, 17, 0.8); }
 
-        /* Right Side: Biography */
         .sidebar {
             flex: 1;
             max-width: 420px;
@@ -95,6 +89,9 @@
             padding: 30px;
             border-left: 1px solid #222;
             background: rgba(10, 10, 10, 0.4);
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Центрируем всё внутри сайдбара */
         }
         .sidebar h3 { 
             font-size: 1.2em; 
@@ -102,6 +99,7 @@
             color: #ff0000; 
             margin-top: 0; 
             text-transform: uppercase;
+            align-self: flex-start; /* Заголовок оставляем слева */
         }
         .sidebar p { 
             font-size: 0.85em; 
@@ -109,9 +107,19 @@
             line-height: 1.8; 
             text-align: justify;
             margin-bottom: 15px;
+            width: 100%;
         }
 
-        /* Mobile adjustments */
+        /* NEW SMALLER BOTTOM LOGO */
+        .logo-bottom {
+            width: 125px; /* В два раза меньше верхнего (250px / 2) */
+            height: 125px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 1px solid #ff0000; /* Красная обводка для стиля */
+            margin-top: 25px; /* Отступ от текста */
+        }
+
         @media (max-width: 900px) {
             .main-layout { padding-left: 0; justify-content: center; }
             .sidebar { margin-left: 0; border-left: none; border-top: 1px solid #222; margin-top: 40px; }
@@ -120,7 +128,7 @@
 </head>
 <body>
 
-    <img src="logo.png" alt="Logo" class="logo">
+    <img src="logo.png" alt="Logo Top" class="logo-top">
 
     <h1>VAELKRYX</h1>
     <p class="subtitle">Alternative Hip-Hop / Dark Sound</p>
@@ -152,6 +160,8 @@
             <p>
                 When there are no teachers, time and your own ears become your only critics. Evolution through sweat, persistence, and loyalty to your vision — that is the true sound.
             </p>
+
+            <img src="logo2.png" alt="Logo Bottom" class="logo-bottom">
         </div>
     </div>
 
