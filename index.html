@@ -5,7 +5,6 @@
     <title>VAELKRYX | Official</title>
     <style>
         body { 
-            /* Твоя картинка из папки сайта */
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), 
                         url('bg.jpg');
             background-size: cover;
@@ -16,18 +15,22 @@
             display: flex; 
             flex-direction: column; 
             align-items: center; 
-            justify-content: center; 
+            justify-content: flex-start;
             min-height: 100vh; 
             margin: 0; 
-            padding: 20px; 
+            padding: 40px 20px; 
         }
-        h1 { letter-spacing: 10px; text-transform: uppercase; border-bottom: 1px solid #333; padding-bottom: 10px; margin-bottom: 5px; }
-        .subtitle { color: #666; margin-bottom: 30px; font-size: 0.9em; }
-        .player-container { width: 100%; max-width: 500px; }
-        .player { margin-bottom: 20px; border: 1px solid #222; background: rgba(17, 17, 17, 0.8); }
-        .links { margin-top: 30px; }
+        h1 { letter-spacing: 10px; text-transform: uppercase; border-bottom: 1px solid #333; padding-bottom: 10px; margin: 0 0 5px 0; }
+        .subtitle { color: #666; margin-bottom: 20px; font-size: 0.9em; }
+        
+        .logo { max-width: 250px; height: auto; margin-bottom: 30px; display: block; }
+
+        .links { margin-bottom: 40px; }
         .links a { color: #666; text-decoration: none; margin: 0 10px; font-size: 0.8em; transition: 0.3s; text-transform: uppercase; }
         .links a:hover { color: #ff0000; border-bottom: 1px solid #ff0000; }
+
+        .player-container { width: 100%; max-width: 500px; }
+        .player { margin-bottom: 20px; border: 1px solid #222; background: rgba(17, 17, 17, 0.8); }
     </style>
 </head>
 <body>
@@ -35,16 +38,18 @@
     <h1>VAELKRYX</h1>
     <p class="subtitle">Alternative Hip-Hop / Dark Sound</p>
     
-    <div class="player-container">
-        <div class="player">
-            <iframe width="100%" height="150" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2317190522&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-        </div>
-    </div>
+    <img src="logo.png" alt="Logo" class="logo">
 
     <div class="links">
         <a href="https://soundcloud.com/tsbduh6jqogl/tracks" target="_blank">Soundcloud</a>
         <a href="https://www.youtube.com/@bihus_oficial" target="_blank">YouTube</a>
         <a href="https://www.tiktok.com/@bihusvitalii" target="_blank">TikTok</a>
+    </div>
+
+    <div class="player-container">
+        <div class="player">
+            <iframe width="100%" height="150" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2317190522&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+        </div>
     </div>
 
 </body>
