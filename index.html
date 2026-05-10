@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="google-site-verification" content="knY5djNmqhoKYjxTp9qHq8Tg8yb-W2jIUVv5naYvCv4" />
+    
     <title>VAELKRYX | Official</title>
     <style>
         body { 
@@ -22,6 +24,7 @@
             position: relative;
         }
 
+        /* Large Logo: 250px wide, 20px from top/left */
         .logo { 
             position: absolute;
             top: 20px;
@@ -63,6 +66,7 @@
         }
         .links a:hover { color: #ff0000; border-bottom: 1px solid #ff0000; }
 
+        /* MAIN LAYOUT GRID */
         .main-layout {
             display: flex;
             width: 100%;
@@ -71,9 +75,10 @@
             padding-left: 145px; 
             box-sizing: border-box;
             align-items: flex-start;
-            flex-wrap: wrap; /* Для мобильных устройств */
+            flex-wrap: wrap;
         }
 
+        /* Left Side: Music */
         .player-container { 
             flex: 1; 
             max-width: 500px;
@@ -81,9 +86,10 @@
         }
         .player { margin-bottom: 25px; border: 1px solid #222; background: rgba(17, 17, 17, 0.8); }
 
+        /* Right Side: Biography */
         .sidebar {
             flex: 1;
-            max-width: 400px;
+            max-width: 420px;
             min-width: 300px;
             margin-left: 80px;
             padding: 30px;
@@ -105,7 +111,7 @@
             margin-bottom: 15px;
         }
 
-        /* На мобилках убираем отступ слева и полосу */
+        /* Mobile adjustments */
         @media (max-width: 900px) {
             .main-layout { padding-left: 0; justify-content: center; }
             .sidebar { margin-left: 0; border-left: none; border-top: 1px solid #222; margin-top: 40px; }
