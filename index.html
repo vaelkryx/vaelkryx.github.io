@@ -22,7 +22,6 @@
             position: relative;
         }
 
-        /* Large Logo: 250px wide, 20px from top/left */
         .logo { 
             position: absolute;
             top: 20px;
@@ -53,10 +52,7 @@
             letter-spacing: 2px;
         }
 
-        .links { 
-            margin-bottom: 0; 
-            text-align: center; 
-        }
+        .links { margin-bottom: 0; text-align: center; }
         .links a { 
             color: #666; 
             text-decoration: none; 
@@ -67,15 +63,53 @@
         }
         .links a:hover { color: #ff0000; border-bottom: 1px solid #ff0000; }
 
-        /* Adjusted position to be lower and aligned with logo center */
+        .main-layout {
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 180px; 
+            padding-left: 145px; 
+            box-sizing: border-box;
+            align-items: flex-start;
+            flex-wrap: wrap; /* Для мобильных устройств */
+        }
+
         .player-container { 
-            width: 100%; 
-            max-width: 500px; 
-            margin-top: 250px; /* Увеличил, чтобы плеер ушел ниже логотипа */
-            margin-left: 145px; /* Ровно центр 250px лого + 20px отступ */
-            align-self: flex-start;
+            flex: 1; 
+            max-width: 500px;
+            min-width: 300px;
         }
         .player { margin-bottom: 25px; border: 1px solid #222; background: rgba(17, 17, 17, 0.8); }
+
+        .sidebar {
+            flex: 1;
+            max-width: 400px;
+            min-width: 300px;
+            margin-left: 80px;
+            padding: 30px;
+            border-left: 1px solid #222;
+            background: rgba(10, 10, 10, 0.4);
+        }
+        .sidebar h3 { 
+            font-size: 1.2em; 
+            letter-spacing: 5px; 
+            color: #ff0000; 
+            margin-top: 0; 
+            text-transform: uppercase;
+        }
+        .sidebar p { 
+            font-size: 0.85em; 
+            color: #bbb; 
+            line-height: 1.8; 
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        /* На мобилках убираем отступ слева и полосу */
+        @media (max-width: 900px) {
+            .main-layout { padding-left: 0; justify-content: center; }
+            .sidebar { margin-left: 0; border-left: none; border-top: 1px solid #222; margin-top: 40px; }
+        }
     </style>
 </head>
 <body>
@@ -91,9 +125,27 @@
         <a href="https://www.tiktok.com/@bihusvitalii" target="_blank">TikTok</a>
     </div>
 
-    <div class="player-container">
-        <div class="player">
-            <iframe width="100%" height="150" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2317190522&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+    <div class="main-layout">
+        <div class="player-container">
+            <div class="player">
+                <iframe width="100%" height="150" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2317190522&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <h3>THE PATH</h3>
+            <p>
+                VAELKRYX is not about diplomas from music academies or the polished sound of expensive studios. It all started with an old guitar and a raw, burning desire to turn internal chaos into something tangible.
+            </p>
+            <p>
+                There is no formal education here. Only years of self-taught struggle, thousands of ruined takes, and endless experiments to find a unique sound. Every track is a result of the mistakes that built this foundation. This is the journey of a man who didn't wait for mentors, but simply took action, driven by a pure passion for music.
+            </p>
+            <p>
+                What you hear now is not the final result or a 'perfect product.' It is a snapshot of this exact moment, a point on the map of my current evolution. I continue to learn and break old boundaries with every new beat. This process is endless, and tomorrow the sound will be different, because for me, standing still means the death of the project.
+            </p>
+            <p>
+                When there are no teachers, time and your own ears become your only critics. Evolution through sweat, persistence, and loyalty to your vision — that is the true sound.
+            </p>
         </div>
     </div>
 
