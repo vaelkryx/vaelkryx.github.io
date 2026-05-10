@@ -18,7 +18,7 @@
             justify-content: flex-start;
             min-height: 100vh; 
             margin: 0; 
-            padding: 80px 20px; 
+            padding: 30px 20px; /* Reduced top padding to move everything up */
             position: relative;
         }
 
@@ -41,19 +41,19 @@
             text-transform: uppercase; 
             border-bottom: 2px solid #333; 
             padding-bottom: 15px; 
-            margin: 0 0 10px 0; 
+            margin: 0 0 10px 0; /* Tightened margins */
             text-align: center;
         }
         
         .subtitle { 
             color: #888; 
-            margin-bottom: 50px; 
+            margin-bottom: 40px; 
             font-size: 1.3em; 
             text-align: center; 
             letter-spacing: 2px;
         }
 
-        .links { margin-bottom: 50px; text-align: center; }
+        .links { margin-bottom: 60px; text-align: center; }
         .links a { 
             color: #666; 
             text-decoration: none; 
@@ -64,8 +64,14 @@
         }
         .links a:hover { color: #ff0000; border-bottom: 1px solid #ff0000; }
 
-        .player-container { width: 100%; max-width: 500px; }
-        .player { margin-bottom: 20px; border: 1px solid #222; background: rgba(17, 17, 17, 0.8); }
+        /* Moved player to the left */
+        .player-container { 
+            width: 100%; 
+            max-width: 500px; 
+            margin-left: 20px; /* Align with the logo margin */
+            align-self: flex-start; /* Forces the container to the left */
+        }
+        .player { border: 1px solid #222; background: rgba(17, 17, 17, 0.8); }
     </style>
 </head>
 <body>
