@@ -18,23 +18,42 @@
             justify-content: flex-start;
             min-height: 100vh; 
             margin: 0; 
-            padding: 40px 20px; 
+            padding: 60px 20px; 
+            position: relative; /* Needed for logo positioning */
         }
-        h1 { letter-spacing: 10px; text-transform: uppercase; border-bottom: 1px solid #333; padding-bottom: 10px; margin: 0 0 5px 0; }
-        .subtitle { color: #666; margin-bottom: 20px; font-size: 0.9em; }
-        
+
+        /* Top Left Logo */
         .logo { 
-            width: 250px; 
-            height: 250px; 
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 80px; 
+            height: 80px; 
             object-fit: cover; 
             border-radius: 50%; 
             border: 1px solid #333;
-            margin-bottom: 30px; 
             display: block; 
         }
 
-        .links { margin-bottom: 40px; }
-        .links a { color: #666; text-decoration: none; margin: 0 10px; font-size: 0.8em; transition: 0.3s; text-transform: uppercase; }
+        h1 { 
+            letter-spacing: 10px; 
+            text-transform: uppercase; 
+            border-bottom: 1px solid #333; 
+            padding-bottom: 10px; 
+            margin: 0 0 5px 0; 
+            text-align: center;
+        }
+        .subtitle { color: #666; margin-bottom: 30px; font-size: 0.9em; text-align: center; }
+
+        .links { margin-bottom: 50px; text-align: center; }
+        .links a { 
+            color: #666; 
+            text-decoration: none; 
+            margin: 0 15px; 
+            font-size: 0.8em; 
+            transition: 0.3s; 
+            text-transform: uppercase; 
+        }
         .links a:hover { color: #ff0000; border-bottom: 1px solid #ff0000; }
 
         .player-container { width: 100%; max-width: 500px; }
@@ -43,11 +62,11 @@
 </head>
 <body>
 
+    <img src="logo.png" alt="Logo" class="logo">
+
     <h1>VAELKRYX</h1>
     <p class="subtitle">Alternative Hip-Hop / Dark Sound</p>
     
-    <img src="logo.png" alt="Logo" class="logo">
-
     <div class="links">
         <a href="https://soundcloud.com/tsbduh6jqogl/tracks" target="_blank">Soundcloud</a>
         <a href="https://www.youtube.com/@bihus_oficial" target="_blank">YouTube</a>
