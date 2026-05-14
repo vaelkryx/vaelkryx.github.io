@@ -8,7 +8,7 @@
     <title>VAELKRYX | Official</title>
     <style>
         body { 
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), 
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), 
                         url('bg.jpg');
             background-size: cover;
             background-position: center;
@@ -82,7 +82,32 @@
             max-width: 500px;
             min-width: 300px;
         }
-        .player { margin-bottom: 25px; border: 1px solid #222; background: rgba(17, 17, 17, 0.8); }
+
+        /* КАРТОЧКА ТРЕКА */
+        .track-card {
+            background: rgba(20, 20, 20, 0.6);
+            border: 1px solid #222;
+            border-radius: 12px; /* Лёгкое скругление */
+            padding: 15px;
+            margin-bottom: 30px;
+            transition: 0.3s;
+        }
+        .track-card:hover {
+            border-color: #444;
+            background: rgba(30, 30, 30, 0.7);
+        }
+
+        .player { margin-bottom: 15px; border-radius: 8px; overflow: hidden; }
+
+        .track-desc {
+            font-size: 0.8em;
+            color: #777;
+            font-style: italic;
+            line-height: 1.5;
+            padding: 0 5px;
+            border-left: 2px solid #ff0000;
+            margin-left: 5px;
+        }
 
         .sidebar {
             flex: 1;
@@ -143,15 +168,27 @@
 
     <div class="main-layout">
         <div class="player-container">
-            <!-- NEWEST TRACK: Black Mask -->
-            <div class="player">
-                <iframe width="100%" height="150" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2320666490&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+            
+            <!-- ТРЕК 1: Black Mask -->
+            <div class="track-card">
+                <div class="player">
+                    <iframe width="100%" height="150" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2320666490&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                </div>
+                <div class="track-desc">
+                    Tension builds to the limit. Beyond is the point of no return.
+                </div>
             </div>
 
-            <!-- PREVIOUS TRACK -->
-            <div class="player">
-                <iframe width="100%" height="150" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2317190522&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+            <!-- ТРЕК 2: Red Lights, No Sleep -->
+            <div class="track-card">
+                <div class="player">
+                    <iframe width="100%" height="150" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2317190522&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                </div>
+                <div class="track-desc">
+                    Lost in the city lights, running on no sleep.
+                </div>
             </div>
+
         </div>
 
         <div class="sidebar">
