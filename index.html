@@ -38,24 +38,23 @@
             display: block; 
         }
 
-        /* UPDATED HEADER WITH METAL MANIA, THINNER, DARKENED, NO GLOW */
+        /* UPDATED LOGO HEADER */
         h1 { 
             font-family: 'Metal Mania', display; 
-            font-size: 5.0em; 
-            font-weight: 300; /* Thinner weight */
+            font-size: 6.0em; /* Increased by 20% */
+            font-weight: 300; 
             letter-spacing: 15px; 
             text-transform: uppercase; 
             border-bottom: 2px solid #333; 
             padding-bottom: 15px; 
             margin: 0 0 10px 0; 
             text-align: center;
-            color: #666666; /* Darkened by another 20% */
+            color: #888888; /* Exact match with subtitle color */
             
-            /* Sharp, thin red outline to harden the look */
-            -webkit-text-stroke: 0.8px #ff0000; 
-            text-stroke: 0.8px #ff0000; 
-            text-shadow: none; /* Completely removed glow */
-            paint-order: stroke fill; 
+            /* No outlines, no glow, purely flat */
+            -webkit-text-stroke: unset;
+            text-stroke: unset;
+            text-shadow: none; 
         }
         
         .subtitle { 
