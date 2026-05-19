@@ -84,7 +84,7 @@
             box-sizing: border-box;
             align-items: flex-start;
             flex-wrap: wrap;
-            flex-grow: 1; /* Позволяет контенту занимать всё пространство до футера */
+            flex-grow: 1; 
         }
 
         .player-container { 
@@ -330,17 +330,14 @@
         const closeModalBtn = document.getElementById('closeModal');
         const modalOverlay = document.getElementById('modalOverlay');
 
-        // Открыть окно
         openModalBtn.addEventListener('click', () => {
             modalOverlay.classList.add('active');
         });
 
-        // Закрыть окно при клике на крестик
         closeModalBtn.addEventListener('click', () => {
             modalOverlay.classList.remove('active');
         });
 
-        // Закрыть окно при клике на темную область вокруг карточки
         modalOverlay.addEventListener('click', (e) => {
             if (e.target === modalOverlay) {
                 modalOverlay.classList.remove('active');
